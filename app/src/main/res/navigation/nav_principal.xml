@@ -10,5 +10,18 @@
         android:id="@+id/loginFragment"
         android:name="me.mateus.digitalhousefoods.fragment.LoginFragment"
         android:label="Digital House Foods"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_r_c"
+            app:exitAnim="@anim/slide_c_l"
+            app:popEnterAnim="@anim/slide_l_c"
+            app:popExitAnim="@anim/slide_c_r" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="me.mateus.digitalhousefoods.fragment.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" />
 </navigation>
