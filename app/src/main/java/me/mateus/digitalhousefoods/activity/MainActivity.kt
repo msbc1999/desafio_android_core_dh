@@ -1,7 +1,8 @@
-package me.mateus.digitalhousefoods
+package me.mateus.digitalhousefoods.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import me.mateus.digitalhousefoods.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
