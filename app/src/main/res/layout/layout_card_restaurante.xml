@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="346dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imgRestauranteLogo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="128"
+            android:scaleType="centerCrop"
+            android:transitionName="logo_restaurante"
+            app:srcCompat="@drawable/image1" />
+
+
+        <TextView
+            android:id="@+id/lblRestauranteNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="Nome"
+            android:textColor="#1F2D3D"
+            android:textSize="36dp"
+            android:transitionName="nome_restaurante" />
+
+        <TextView
+            android:id="@+id/lblRestauranteEndereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="Endereço"
+            android:textColor="#8492A6"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/lblRestauranteHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="Horário"
+            android:textColor="#8492A6"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
