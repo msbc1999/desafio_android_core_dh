@@ -18,10 +18,33 @@
             app:exitAnim="@anim/slide_c_l"
             app:popEnterAnim="@anim/slide_l_c"
             app:popExitAnim="@anim/slide_c_r" />
+        <action
+            android:id="@+id/action_loginFragment_to_restaurantesFragment"
+            app:destination="@id/restaurantesFragment"
+            app:enterAnim="@anim/slide_r_c"
+            app:exitAnim="@anim/slide_c_l"
+            app:popEnterAnim="@anim/slide_l_c"
+            app:popExitAnim="@anim/slide_c_r"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="me.mateus.digitalhousefoods.fragment.RegisterFragment"
         android:label="Register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_restaurantesFragment"
+            app:destination="@id/restaurantesFragment"
+            app:enterAnim="@anim/slide_r_c"
+            app:exitAnim="@anim/slide_c_l"
+            app:popEnterAnim="@anim/slide_l_c"
+            app:popExitAnim="@anim/slide_c_r"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantesFragment"
+        android:name="me.mateus.digitalhousefoods.fragment.RestaurantesFragment"
+        android:label="Digital House Foods"
+        tools:layout="@layout/fragment_main"/>
+
 </navigation>

@@ -18,11 +18,14 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(R.layout.fragment_login, container, false)
-        v.btnRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        return inflater.inflate(R.layout.fragment_login, container, false).apply {
+            btnRegister.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+            }
+            btnLogin.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_restaurantesFragment)
+            }
         }
-        return v
     }
 
     companion object {

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.RestauranteActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarRestaurante"
+        android:layout_width="match_parent"
+        android:layout_height="342dp"
+        android:fitsSystemWindows="true"
+        android:transitionName="transition_toolbar_logo"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginBottom="18dp"
+            app:expandedTitleMarginStart="24dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:id="@+id/imgDetalhesRestaurante"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image1" />
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:background="@color/colorPrimary"-->
+            <!--                android:elevation="10dp"-->
+            <!--                android:outlineProvider="none"-->
+            <!--                android:transitionName="logo_restaurante" />-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_alignBottom="@+id/image"
+                android:layout_gravity="bottom"
+                android:background="@drawable/scrim_bottom"
+                android:fitsSystemWindows="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/scrim_top"
+                android:visibility="invisible"
+                app:layout_collapseMode="pin" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/tbDetalhesRestaurante"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:transitionName="nome_restaurante"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="Titulo" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDetalhesRestaurante"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".fragment.RestauranteDetalhesFragment"
+        tools:listitem="@layout/layout_card_restaurante_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
