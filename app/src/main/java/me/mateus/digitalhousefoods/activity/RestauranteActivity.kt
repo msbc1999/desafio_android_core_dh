@@ -1,12 +1,14 @@
 package me.mateus.digitalhousefoods.activity
 
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Bundle
+import android.util.Pair
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,11 +40,16 @@ class RestauranteActivity : AppCompatActivity() {
                     ri: RestauranteItem,
                     rivh: RestauranteItemViewHolder
                 ) {
-                    Toast.makeText(
-                        this@RestauranteActivity,
-                        "Clicou no item ${ri.nome}!",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    startActivity(
+                        Intent(this@RestauranteActivity, ItemDetalhesActivity::class.java).apply {
+                            putExtra("restaurante_item", ri)
+                        },
+                        ActivityOptions.makeSceneTransitionAnimation(
+                            this@RestauranteActivity,
+                            Pair(rivh.cpImagem as View, "item_imagem")
+                        ).toBundle()
+                    )
+
                 }
             }
         }
@@ -104,8 +111,8 @@ class RestauranteItemViewHolder(
     private val adapter: RestauranteItemAdapter
 ) : RecyclerView.ViewHolder(view) {
 
-    private var cpImagem: ImageView = view.findViewById(R.id.imgItemImagem)
-    private var cpNome: TextView = view.findViewById(R.id.lblItemNome)
+    var cpImagem: ImageView = view.findViewById(R.id.imgItemImagem)
+    var cpNome: TextView = view.findViewById(R.id.lblItemNome)
 
     var item: RestauranteItem = RestauranteItem()
 

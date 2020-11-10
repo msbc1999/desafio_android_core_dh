@@ -6,4 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".activity.ItemDetalhesActivity">
 
+    <ImageView
+        android:id="@+id/imgItemImagem"
+        android:layout_width="match_parent"
+        android:layout_height="342dp"
+        android:scaleType="centerCrop"
+        android:transitionName="item_imagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image1" />
+
+    <ImageView
+        android:id="@+id/imgItemVoltar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/txtItemNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="14dp"
+        android:text="Nome"
+        android:textColor="#FFFFFF"
+        android:textSize="36dp"
+        android:transitionName="item_nome"
+        app:layout_constraintBottom_toBottomOf="@+id/imgItemImagem"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtItemDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:padding="12dp"
+        android:text="TextView"
+        android:textColor="#8492A6"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgItemImagem"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Descrição" />
 </androidx.constraintlayout.widget.ConstraintLayout>

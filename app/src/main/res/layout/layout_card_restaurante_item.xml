@@ -20,6 +20,7 @@
             android:layout_height="0dp"
             android:layout_weight="128"
             android:scaleType="centerCrop"
+            android:transitionName="item_imagem"
             app:srcCompat="@drawable/image1" />
 
 
@@ -33,7 +34,8 @@
             android:paddingVertical="2dp"
             android:text="Nome"
             android:textColor="#5A6978"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            android:transitionName="item_nome" />
 
     </LinearLayout>
 
